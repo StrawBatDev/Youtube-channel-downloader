@@ -19,6 +19,7 @@ for CHANNEL in "${CHANNELS[@]}"; do
          -ciw \
          --download-archive archive.txt \
          --dateafter "$DATE_AFTER" \
+         --playlist-reverse \
          -o "%(uploader)s/%(upload_date>%Y-%m-%d)s - %(title)s.%(ext)s" \
          "$CHANNEL" >> "$LOGFILE" 2>&1
 done
